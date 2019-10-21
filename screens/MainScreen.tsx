@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Platform, FlatList, StyleSheet } from "react-native";
+import { Platform, FlatList, StyleSheet, ScrollView } from "react-native";
 import CustomHeaderButton from "../components/UI/CustomHeaderButton";
 import { HeaderButtons, Item } from "react-navigation-header-buttons";
 import { useSelector } from "react-redux";
@@ -16,19 +16,21 @@ const MainScreen = props => {
   };
 
   return (
-    <FlatList
-      data={items}
-      keyExtractor={item => String(item.getId())}
-      renderItem={itemData => (
-        <ItemComponent
-          title={itemData.item.getTitle()}
-          imageUrl={itemData.item.getImageUrl()}
-          id={itemData.item.getId()}
-          onPress={showDetailsHanlder}
-          style={styles.item}
-        ></ItemComponent>
-      )}
-    />
+    <ScrollView>
+      <FlatList
+        data={items}
+        keyExtractor={item => String(item.getId())}
+        renderItem={itemData => (
+          <ItemComponent
+            title={itemData.item.getTitle()}
+            imageUrl={itemData.item.getImageUrl()}
+            id={itemData.item.getId()}
+            onPress={showDetailsHanlder}
+            style={styles.item}
+          ></ItemComponent>
+        )}
+      />
+    </ScrollView>
   );
 };
 
