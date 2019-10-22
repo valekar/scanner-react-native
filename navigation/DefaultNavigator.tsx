@@ -58,7 +58,10 @@ const AuthNavigator = createStackNavigator(
     [LOGIN]: LoginScreen
   },
   {
-    defaultNavigationOptions: defaultNavigationOptions
+    headerMode: "none",
+    navigationOptions: {
+      headerVisible: false
+    }
   }
 );
 

@@ -1,15 +1,12 @@
-import React from "react";
-import { TouchableOpacity, View, Text, Button } from "react-native";
+import React, { useState } from "react";
+import { TouchableOpacity, View, Text, Button, StyleSheet } from "react-native";
 import { Formik, Field } from "formik";
 import TextInputField from "../components/UI/TextInputField";
 import ErrorText from "../components/UI/ErrorText";
 import $t from "../i18n/index";
 import { logInValidationRules } from "../validation/auth";
+import CustomButton from "./UI/CustomButton";
 const LoginForm = props => {
-  const submitHandler = () => {
-    console.log("in Login form");
-  };
-
   return (
     <Formik
       initialValues={{ email: "", password: "" }}
@@ -17,7 +14,7 @@ const LoginForm = props => {
       validationSchema={logInValidationRules}
     >
       {({ handleSubmit }) => (
-        <View>
+        <View style={styles.container}>
           <Field
             name="email"
             component={TextInputField}
@@ -33,11 +30,38 @@ const LoginForm = props => {
             error={!!props.signInError}
             message={$t("auth.invalidCredentials")}
           />
-          <Button title={$t("auth.signIn")} onPress={handleSubmit.bind(this)} />
+          <View style={styles.submit}>
+            <CustomButton
+              onPress={handleSubmit.bind(this)}
+              title={$t("auth.signIn")}
+            />
+          </View>
         </View>
       )}
     </Formik>
   );
 };
+
+const styles = StyleSheet.create({
+  submit: {
+    marginLeft: 50,
+    marginRight: 50,
+    marginTop: 20
+  },
+  container: {
+    marginTop: 50
+  },
+  textStyle: {
+    fontSize: 20,
+    color: "#ffffff",
+    textAlign: "center"
+  },
+
+  buttonStyle: {
+    padding: 10,
+    backgroundColor: "#202646",
+    borderRadius: 5
+  }
+});
 
 export default LoginForm;
