@@ -6,10 +6,17 @@ import MainScreen from "../screens/MainScreen";
 import LoginScreen from "../screens/auth/LoginScreen";
 import React from "react";
 import { Platform } from "react-native";
-import { MAIN, LOGIN, AUTHENTICATE, HOME } from "../constants/RouteConstants";
+import {
+  MAIN,
+  LOGIN,
+  AUTHENTICATE,
+  HOME,
+  REGISTER
+} from "../constants/RouteConstants";
 import LogoutScreen from "../screens/auth/LogoutScreen";
 import { Ionicons } from "@expo/vector-icons";
 import Colors from "../constants/Colors";
+import RegisterScreen from "../screens/auth/RegisterScreen";
 
 const defaultNavigationOptions = {
   headerTitle: "Default Name",
@@ -55,7 +62,8 @@ const DrawerNavigator = createDrawerNavigator(
 
 const AuthNavigator = createStackNavigator(
   {
-    [LOGIN]: LoginScreen
+    [LOGIN]: LoginScreen,
+    [REGISTER]: RegisterScreen
   },
   {
     headerMode: "none",

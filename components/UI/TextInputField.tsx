@@ -21,8 +21,8 @@ const TextInputField = ({ field, form, ...props }) => {
 
 const styles = StyleSheet.create({
   container: {
-    marginLeft: 50,
-    marginRight: 50,
+    marginLeft: 20,
+    marginRight: 20,
     paddingTop: 40,
     alignItems: "center",
     justifyContent: "center",

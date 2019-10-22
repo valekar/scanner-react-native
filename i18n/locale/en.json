@@ -4,11 +4,12 @@
     "ok": "OK",
     "success": "success",
     "send": "Send",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "back": "Back"
   },
   "auth": {
     "offline": "Please check your Internet connection",
-    "signUp": "Sign up",
+    "register": "Register",
     "signIn": "Sign in",
     "enterFirstName": "Enter your first name",
     "enterLastName": "Enter your last name",
