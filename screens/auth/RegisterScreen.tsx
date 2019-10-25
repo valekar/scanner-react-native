@@ -5,6 +5,7 @@ import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view
 
 const RegisterScreen = props => {
   const registerHandler = values => {
+    console.log("triggered");
     console.log(values);
   };
 

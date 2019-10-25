@@ -34,10 +34,7 @@ const LoginForm = props => {
           </View>
 
           <View style={styles.button}>
-            <CustomButton
-              onPress={handleSubmit.bind(this)}
-              title={$t("auth.signIn")}
-            />
+            <CustomButton onPress={handleSubmit} title={$t("auth.signIn")} />
           </View>
         </View>
       )}

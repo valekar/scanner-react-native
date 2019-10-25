@@ -14,6 +14,7 @@
     "enterFirstName": "Enter your first name",
     "enterLastName": "Enter your last name",
     "enterEmail": "Enter your email",
+    "confirmEmail": "Confirm Email",
     "enterPassword": "Enter your password",
     "confirmPassword": "Confirm your password",
     "passwordsMustMatch": "Passwords must match",
@@ -43,6 +44,7 @@
 
     "mustBeValidEmail": "Email must be a valid email format.",
     "passwordsMustMatch": "Passwords must match.",
+    "emailMustMatch": "Email must match.",
     "passwordMinCharacters": "Password must be at least 8 characters.",
     "confirmPasswordMinCharacters": "Password confirmation must be at least 8 characters.",
     "currentPasswordMinCharacters": "Current password must be at least 8 characters.",

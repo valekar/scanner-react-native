@@ -78,6 +78,6 @@ const SwitchNavigator = createSwitchNavigator({
   Drawer: DrawerNavigator
 });
 
-const AppContainer = createAppContainer(SwitchNavigator);
+const MainNavigator = createAppContainer(SwitchNavigator);
 
-export default AppContainer;
+export default MainNavigator;

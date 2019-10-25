@@ -4,7 +4,7 @@ import { Formik, Field } from "formik";
 import TextInputField from "../UI/TextInputField";
 import ErrorText from "../UI/ErrorText";
 import $t from "../../i18n/index";
-import { logInValidationRules } from "../../validation/auth";
+import { registrationValidationRules } from "../../validation/auth";
 import CustomButton from "../UI/CustomButton";
 import { LOGIN } from "../../constants/RouteConstants";
 const RegisterForm = props => {
@@ -12,26 +12,22 @@ const RegisterForm = props => {
     <Formik
       initialValues={{ email: "", password: "" }}
       onSubmit={values => props.onSubmit(values)}
-      validationSchema={logInValidationRules}
+      validationSchema={registrationValidationRules}
     >
       {({ handleSubmit }) => (
         <View style={styles.container}>
           <View style={styles.form}>
             <Field
-              name="first_name"
-              component={TextInputField}
-              placeholder={$t("auth.enterFirstName")}
-            />
-            <Field
-              name="last_name"
-              component={TextInputField}
-              placeholder={$t("auth.enterLastName")}
-            />
-            <Field
               name="email"
               component={TextInputField}
               placeholder={$t("auth.enterEmail")}
             />
+            <Field
+              name="confirm_email"
+              component={TextInputField}
+              placeholder={$t("auth.confirmEmail")}
+            />
+
             <ErrorText
               error={!!props.signUpErrors.email}
               message={props.signUpErrors.email}
@@ -41,12 +37,6 @@ const RegisterForm = props => {
               component={TextInputField}
               secureTextEntry
               placeholder={$t("auth.enterPassword")}
-            />
-            <Field
-              name="confirm_password"
-              component={TextInputField}
-              secureTextEntry
-              placeholder={$t("auth.confirmPassword")}
             />
           </View>
           <View style={styles.buttonContainer}>
@@ -60,7 +50,7 @@ const RegisterForm = props => {
             </View>
             <View style={styles.button}>
               <CustomButton
-                onPress={handleSubmit.bind(this)}
+                onPress={handleSubmit}
                 title={$t("auth.register")}
               />
             </View>

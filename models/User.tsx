@@ -1,11 +1,27 @@
 export class User {
-  private id: Number;
-  private email: String;
-  private name: String;
-  constructor(id: Number, name: String, email: String) {
+  id: Number;
+  email: String;
+  name: String;
+  password: String;
+  confirmPassword: String;
+  first_name: String;
+  last_name: String;
+  constructor(
+    id: Number,
+    name: String,
+    email: String,
+    password: String,
+    confirmPassword: String,
+    first_name: String,
+    last_name: String
+  ) {
     this.id = id;
     this.name = name;
     this.email = email;
+    this.password = password;
+    this.confirmPassword = confirmPassword;
+    this.first_name = first_name;
+    this.last_name = last_name;
   }
 
   public getName(): String {
@@ -22,5 +38,13 @@ export class User {
 
   public getId(): Number {
     return this.id;
+  }
+
+  public getPassward(): String {
+    return this.password;
+  }
+
+  public getConfirmPassword(): String {
+    return this.confirmPassword;
   }
 }

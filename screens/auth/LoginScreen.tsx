@@ -6,11 +6,22 @@ import { HOME, REGISTER } from "../../constants/RouteConstants";
 import LoginForm from "../../components/auth/LoginForm";
 import CustomButton from "../../components/UI/CustomButton";
 import $t from "../../i18n";
+import { useDispatch, useSelector } from "react-redux";
+import * as userActions from "../../store/actions/UserAction";
+import { User } from "../../models/User";
+import { UserInitialState } from "../../store/reducers/UserReducer";
+
 const LoginScreen = props => {
-  const onsubmitHanlder = values => {
+  const dispatch = useDispatch();
+  const user = useSelector(state => state.user);
+
+  const onsubmitHandler = async (values: User) => {
+    await dispatch(userActions.authenticateUser(values));
+
     console.log(values);
-    console.log("SUbmitted");
+    //if (user.isAuthenticated) {
     props.navigation.navigate({ routeName: HOME });
+    //}
   };
 
   return (
@@ -20,7 +31,7 @@ const LoginScreen = props => {
           <Text style={styles.text}>DRAFTS</Text>
         </View>
         <KeyboardAwareScrollView enableOnAndroid>
-          <LoginForm onSubmit={onsubmitHanlder} signInError={false} />
+          <LoginForm onSubmit={onsubmitHandler} signInError={false} />
           <View style={styles.button}>
             <CustomButton
               onPress={() => {
