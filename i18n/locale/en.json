@@ -49,7 +49,8 @@
     "confirmPasswordMinCharacters": "Password confirmation must be at least 8 characters.",
     "currentPasswordMinCharacters": "Current password must be at least 8 characters.",
     "newPasswordMinCharacters": "New assword must be at least 8 characters.",
-    "newPasswordConfirmationMinCharacters": "New password confirmation must be at least 8 characters."
+    "newPasswordConfirmationMinCharacters": "New password confirmation must be at least 8 characters.",
+    "invalidCurrentPassword": "Current password is not correct"
   },
   "error": {
     "somethingWrong": "Something went wrong",
@@ -60,7 +61,9 @@
     "close": "Close",
     "user": {
       "userNotFound": "User cannot be found",
-      "invalidCredentials": "Email/Password combination is incorrect. Have you registered?"
+      "invalidCredentials": "Email/Password combination is incorrect. Have you registered?",
+      "notUpdated": "User could not be changed",
+      "passwordNotUpdated": "Password could not be changed"
     }
   },
   "profile": {
@@ -72,7 +75,9 @@
       "change": "Change",
       "invalidOldPassword": "Old password is incorrect.",
       "passwordChanged": "Password Changed",
-      "passwordChangedSuccess": "Password has been changed"
+      "passwordChangedSuccess": "Password has been changed",
+      "changedUserPassword": "Successfully updated password!",
+      "changePasswordFail": "Change password fail"
     },
     "updateUser": {
       "updateProfile": "Update profile",
@@ -82,7 +87,9 @@
       "importImage": "Import image",
       "importFromGallery": "Import from gallery",
       "takePicture": "Take picture",
-      "noPermissions": "No permissions"
+      "noPermissions": "No permissions",
+      "updatedUserProfile": "Successfully updated user profile!",
+      "updateProfileFail": "Update profile failed!"
     }
   }
 }

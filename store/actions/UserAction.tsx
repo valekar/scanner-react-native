@@ -1,6 +1,18 @@
-import { AUTHENTICATE, REGISTER } from "../../constants/RouteConstants";
+import {
+  AUTHENTICATE,
+  REGISTER,
+  CHANGE_PASSWORD,
+  UPDATE_USER
+} from "../../constants/RouteConstants";
 import { User } from "../../models/User";
-import { registerUser, fetchUser, fetchAnyUser } from "../../helpers/db";
+import {
+  registerUser,
+  fetchUser,
+  fetchAnyUser,
+  updateUser,
+  findUserByEmail,
+  updatePassword
+} from "../../helpers/db";
 import $t from "../../i18n";
 export const authenticateUser = (user: User) => {
   return async dispatch => {
@@ -49,10 +61,67 @@ export const fetchExistingUser = () => {
       const user = result.rows._array[0];
       dispatch({
         type: AUTHENTICATE,
-        value: { isAuthenticated: authenticateUser, user: user }
+        value: { isAuthenticated: true, user: user }
       });
     } else {
       throw new Error($t("error.user.userNotFound"));
+    }
+  };
+};
+
+export const updateExistingUser = (user: User) => {
+  return async dispatch => {
+    const result: any = await updateUser(user);
+
+    // console.log(result);
+    if (result.rowsAffected > 0) {
+      //do an api call just to verify if user exists
+      const result: any = await findUserByEmail(user.email);
+      if (result.rows._array.length > 0) {
+        //do an api call just to verify if user exists
+        const user = result.rows._array[0];
+        dispatch({
+          type: AUTHENTICATE,
+          value: { isAuthenticated: true, user: user }
+        });
+      } else {
+        throw new Error($t("error.user.userNotFound"));
+      }
+    } else {
+      throw new Error($t("error.user.notUpdated"));
+    }
+  };
+};
+
+export const changePassword = (modUser: User) => {
+  return async (dispatch, getState) => {
+    // console.log("change password");
+    //console.log(getState().user);
+    const user: User = getState().user.user;
+    if (user.password !== modUser.current_password) {
+      throw new Error($t("validation.invalidCurrentPassword"));
+    }
+    if (modUser.new_password !== modUser.new_password_confirmation) {
+      throw new Error($t("validation.passwordsMustMatch"));
+    }
+
+    const result: any = await updatePassword(modUser);
+    //console.log(result);
+    if (result.rowsAffected > 0) {
+      const result: any = await findUserByEmail(user.email);
+      //console.log(user);
+      if (result.rows._array.length > 0) {
+        //do an api call just to verify if user exists
+        const user = result.rows._array[0];
+        dispatch({
+          type: CHANGE_PASSWORD,
+          value: { isAuthenticated: true, user: user }
+        });
+      } else {
+        throw new Error($t("error.user.userNotFound"));
+      }
+    } else {
+      throw new Error($t("error.user.passwordNotUpdated"));
     }
   };
 };

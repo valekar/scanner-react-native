@@ -66,9 +66,6 @@ const styles = StyleSheet.create({
     marginTop: 30
   },
   button: {
-    //alignItems: "center",
-    //justifyContent: "center",
-    //width: "80%"
     flex: 1
   },
   form: {
@@ -81,9 +78,7 @@ const styles = StyleSheet.create({
 
   buttonContainer: {
     flexDirection: "row",
-    // width: "100%"
     alignItems: "center"
-    //justifyContent: "space-evenly"
   }
 });
 

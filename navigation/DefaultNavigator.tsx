@@ -13,13 +13,17 @@ import {
   HOME,
   REGISTER,
   DRAWER,
-  STARTUP
+  STARTUP,
+  PROFILE,
+  CHANGE_PASSWORD
 } from "../constants/RouteConstants";
 import LogoutScreen from "../screens/auth/LogoutScreen";
 import { Ionicons } from "@expo/vector-icons";
 import Colors from "../constants/Colors";
 import RegisterScreen from "../screens/auth/RegisterScreen";
 import StartupScreen from "../screens/auth/StartupScreen";
+import ProfileScreen from "../screens/user/ProfileScreen";
+import ChangePasswordScreen from "../screens/user/ChangePasswordScreen";
 
 const defaultNavigationOptions = {
   headerTitle: "Default Name",
@@ -27,6 +31,7 @@ const defaultNavigationOptions = {
     width: "100%",
     color: "white"
   },
+  headerTintColor: Platform.OS === "android" ? "white" : Colors.primary,
   headerStyle: {
     backgroundColor: Platform.OS === "android" ? Colors.primary : ""
     //width: "100%"
@@ -46,6 +51,8 @@ const navigationOptions = {
 const HomeNavigator = createStackNavigator(
   {
     [MAIN]: MainScreen
+    //[PROFILE]: ProfileScreen,
+    //[CHANGE_PASSWORD]: ChangePasswordScreen
   },
 
   {
@@ -54,12 +61,53 @@ const HomeNavigator = createStackNavigator(
   }
 );
 
-const DrawerNavigator = createDrawerNavigator(
+const ProfileNavigator = createStackNavigator(
   {
-    [HOME]: HomeNavigator
+    [PROFILE]: ProfileScreen
   },
   {
-    contentComponent: LogoutScreen
+    navigationOptions: {
+      drawerIcon: drawerConfig => (
+        <Ionicons
+          name={Platform.OS === "android" ? "md-person" : "ios-person"}
+          size={23}
+          color={drawerConfig.tintColor}
+        />
+      )
+    },
+    defaultNavigationOptions: defaultNavigationOptions
+  }
+);
+
+const ChangePasswordNavigator = createStackNavigator(
+  {
+    [CHANGE_PASSWORD]: ChangePasswordScreen
+  },
+  {
+    navigationOptions: {
+      drawerIcon: drawerConfig => (
+        <Ionicons
+          name={Platform.OS === "android" ? "md-settings" : "ios-settings"}
+          size={23}
+          color={drawerConfig.tintColor}
+        />
+      )
+    },
+    defaultNavigationOptions: defaultNavigationOptions
+  }
+);
+
+const DrawerNavigator = createDrawerNavigator(
+  {
+    [HOME]: HomeNavigator,
+    [PROFILE]: ProfileNavigator,
+    [CHANGE_PASSWORD]: ChangePasswordNavigator
+  },
+  {
+    contentComponent: LogoutScreen,
+    contentOptions: {
+      activeTintColor: Colors.primary
+    }
   }
 );
 

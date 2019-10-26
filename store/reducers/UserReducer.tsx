@@ -1,7 +1,9 @@
 import {
   AUTHENTICATE,
   IS_AUTHENTICATED,
-  REGISTER
+  REGISTER,
+  UPDATE_USER,
+  CHANGE_PASSWORD
 } from "../../constants/RouteConstants";
 import { User } from "../../models/User";
 
@@ -41,6 +43,22 @@ export default (state = initialState, action: AuthenticateAction) => {
     }
 
     case REGISTER: {
+      return {
+        ...state,
+        user: typeValues.user,
+        isAuthenticated: typeValues.isAuthenticated
+      };
+    }
+
+    case UPDATE_USER: {
+      return {
+        ...state,
+        user: typeValues.user,
+        isAuthenticated: typeValues.isAuthenticated
+      };
+    }
+
+    case CHANGE_PASSWORD: {
       return {
         ...state,
         user: typeValues.user,

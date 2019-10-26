@@ -88,3 +88,62 @@ export const fetchAnyUser = () => {
 
   return promise;
 };
+
+export const updateUser = user => {
+  const promise = new Promise((resolve, reject) => {
+    db.transaction(tx => {
+      tx.executeSql(
+        "UPDATE users set first_name = ? , last_name= ? WHERE email = ?",
+        [user.first_name, user.last_name, user.email],
+        (_, result) => {
+          resolve(result);
+        },
+        (_, err) => {
+          reject(err);
+          return false;
+        }
+      );
+    });
+  });
+
+  return promise;
+};
+
+export const updatePassword = (user: User) => {
+  const promise = new Promise((resolve, reject) => {
+    db.transaction(tx => {
+      tx.executeSql(
+        "UPDATE users set password = ? WHERE email = ?",
+        [user.new_password, user.email],
+        (_, result) => {
+          resolve(result);
+        },
+        (_, err) => {
+          reject(err);
+          return false;
+        }
+      );
+    });
+  });
+
+  return promise;
+};
+
+export const findUserByEmail = (email: String) => {
+  const promise = new Promise((resolve, reject) => {
+    db.readTransaction(tx => {
+      tx.executeSql(
+        "SELECT * FROM users WHERE email = ?",
+        [email],
+        (_, result) => {
+          resolve(result);
+        },
+        (_, err) => {
+          reject(err);
+          return false;
+        }
+      );
+    });
+  });
+  return promise;
+};

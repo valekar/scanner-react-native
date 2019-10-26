@@ -6,6 +6,9 @@ export class User {
   confirmPassword: String;
   first_name: String;
   last_name: String;
+  new_password: String;
+  current_password: String;
+  new_password_confirmation: String;
   constructor(
     id: Number,
     name: String,
@@ -13,7 +16,10 @@ export class User {
     password: String,
     confirmPassword: String,
     first_name: String,
-    last_name: String
+    last_name: String,
+    current_password: String,
+    new_password: String,
+    new_password_confirmation: String
   ) {
     this.id = id;
     this.name = name;
@@ -22,6 +28,9 @@ export class User {
     this.confirmPassword = confirmPassword;
     this.first_name = first_name;
     this.last_name = last_name;
+    this.current_password = current_password;
+    this.new_password = new_password;
+    this.new_password_confirmation = new_password_confirmation;
   }
 
   public getName(): String {

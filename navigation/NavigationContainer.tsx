@@ -8,7 +8,7 @@ import { LOGIN } from "../constants/RouteConstants";
 const NavigationContainer = props => {
   const navRef: any = useRef();
   const isAuth = useSelector(state => state.user.isAuthenticated);
-  console.log("navigation contianeer");
+  //console.log("navigation contianeer");
 
   useEffect(() => {
     if (!isAuth) {

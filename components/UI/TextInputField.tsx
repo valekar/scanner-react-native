@@ -11,7 +11,7 @@ const TextInputField = ({ field, form, ...props }) => {
         value={field.value}
         onChangeText={form.handleChange(field.name)}
         onBlur={form.handleBlur(field.name)}
-        //placeholderTextColor="black"
+        editable={props.editable ? props.editable : true}
         {...props}
       />
       <ErrorMessage name={field.name} component={Text} />
