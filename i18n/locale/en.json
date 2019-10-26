@@ -57,7 +57,11 @@
     "restart": "Restart",
     "cancel": "Cancel",
     "socialLoginError": "Social login error",
-    "close": "Close"
+    "close": "Close",
+    "user": {
+      "userNotFound": "User cannot be found",
+      "invalidCredentials": "Email/Password combination is incorrect. Have you registered?"
+    }
   },
   "profile": {
     "changePassword": {

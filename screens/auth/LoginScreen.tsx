@@ -9,19 +9,23 @@ import $t from "../../i18n";
 import { useDispatch, useSelector } from "react-redux";
 import * as userActions from "../../store/actions/UserAction";
 import { User } from "../../models/User";
-import { UserInitialState } from "../../store/reducers/UserReducer";
+import CustomAlert from "../../components/UI/CustomAlert";
 
 const LoginScreen = props => {
   const dispatch = useDispatch();
   const user = useSelector(state => state.user);
 
   const onsubmitHandler = async (values: User) => {
-    await dispatch(userActions.authenticateUser(values));
-
-    console.log(values);
-    //if (user.isAuthenticated) {
-    props.navigation.navigate({ routeName: HOME });
-    //}
+    try {
+      await dispatch(userActions.authenticateUser(values));
+      props.navigation.navigate({ routeName: HOME });
+    } catch (err) {
+      CustomAlert({
+        header: err.message,
+        message: $t("error.user.invalidCredentials")
+      });
+      console.log(err.message);
+    }
   };
 
   return (

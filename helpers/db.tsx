@@ -6,11 +6,13 @@ const db = SQLite.openDatabase("app.db");
 export const init = () => {
   const promise = new Promise((resolve, reject) => {
     db.transaction(tx => {
+      //tx.executeSql("DROP TABLE users");
+
       tx.executeSql(
         "CREATE TABLE IF NOT EXISTS users " +
           "(id INTEGER PRIMARY KEY NOT NULL, " +
-          "first_name TEXT NOT NULL, " +
-          "last_name TEXT NOT NULL, " +
+          "first_name TEXT , " +
+          "last_name TEXT, " +
           "password TEXT NOT NULL, " +
           "email TEXT NULL )",
         [],
@@ -52,7 +54,7 @@ export const fetchUser = (user: User) => {
   const promise = new Promise((resolve, reject) => {
     db.readTransaction(tx => {
       tx.executeSql(
-        "SELECT * FROM users WHERE email=? and password=?",
+        "SELECT * FROM users WHERE email=? AND password=?",
         [user.email, user.password],
         (_, result) => {
           resolve(result);
@@ -64,5 +66,25 @@ export const fetchUser = (user: User) => {
       );
     });
   });
+  return promise;
+};
+
+export const fetchAnyUser = () => {
+  const promise = new Promise((resolve, reject) => {
+    db.readTransaction(tx => {
+      tx.executeSql(
+        "SELECT * FROM users",
+        [],
+        (_, result) => {
+          resolve(result);
+        },
+        (_, err) => {
+          reject(err);
+          return false;
+        }
+      );
+    });
+  });
+
   return promise;
 };

@@ -2,11 +2,18 @@ import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 import RegisterForm from "../../components/auth/RegisterForm";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import { User } from "../../models/User";
+import { useDispatch } from "react-redux";
+import * as userActions from "../../store/actions/UserAction";
+import { HOME } from "../../constants/RouteConstants";
 
 const RegisterScreen = props => {
-  const registerHandler = values => {
-    console.log("triggered");
-    console.log(values);
+  const dispatch = useDispatch();
+  const registerHandler = async (values: User) => {
+    //console.log("Registration");
+    //console.log(values);
+    await dispatch(userActions.registerNewUser(values));
+    props.navigation.navigate({ routeName: HOME });
   };
 
   return (

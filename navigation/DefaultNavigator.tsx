@@ -11,12 +11,15 @@ import {
   LOGIN,
   AUTHENTICATE,
   HOME,
-  REGISTER
+  REGISTER,
+  DRAWER,
+  STARTUP
 } from "../constants/RouteConstants";
 import LogoutScreen from "../screens/auth/LogoutScreen";
 import { Ionicons } from "@expo/vector-icons";
 import Colors from "../constants/Colors";
 import RegisterScreen from "../screens/auth/RegisterScreen";
+import StartupScreen from "../screens/auth/StartupScreen";
 
 const defaultNavigationOptions = {
   headerTitle: "Default Name",
@@ -74,8 +77,9 @@ const AuthNavigator = createStackNavigator(
 );
 
 const SwitchNavigator = createSwitchNavigator({
+  [STARTUP]: StartupScreen,
   [AUTHENTICATE]: AuthNavigator,
-  Drawer: DrawerNavigator
+  [DRAWER]: DrawerNavigator
 });
 
 const MainNavigator = createAppContainer(SwitchNavigator);

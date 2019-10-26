@@ -1,4 +1,8 @@
-import { AUTHENTICATE, IS_AUTHENTICATED } from "../../constants/RouteConstants";
+import {
+  AUTHENTICATE,
+  IS_AUTHENTICATED,
+  REGISTER
+} from "../../constants/RouteConstants";
 import { User } from "../../models/User";
 
 export interface UserInitialState {
@@ -22,17 +26,26 @@ interface AuthenticateValue {
 }
 
 export default (state = initialState, action: AuthenticateAction) => {
+  let typeValues: AuthenticateValue = action.value;
   switch (action.type) {
     case AUTHENTICATE: {
-      let typeValues: AuthenticateValue = action.value;
+      //let typeValues: AuthenticateValue = action.value;
       if (typeValues.isAuthenticated) {
-        console.log(typeValues);
+        //console.log(typeValues);
         return {
           ...state,
           user: typeValues.user,
-          isAuthenticated: false // typeValues.isAuthenticated
+          isAuthenticated: typeValues.isAuthenticated
         };
       }
+    }
+
+    case REGISTER: {
+      return {
+        ...state,
+        user: typeValues.user,
+        isAuthenticated: typeValues.isAuthenticated
+      };
     }
 
     default: {

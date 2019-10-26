@@ -6,7 +6,7 @@ import ErrorText from "../UI/ErrorText";
 import $t from "../../i18n/index";
 import { registrationValidationRules } from "../../validation/auth";
 import CustomButton from "../UI/CustomButton";
-import { LOGIN } from "../../constants/RouteConstants";
+
 const RegisterForm = props => {
   return (
     <Formik
