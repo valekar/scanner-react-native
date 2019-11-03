@@ -39,4 +39,8 @@ target 'scanner' do
 
   pod 'RNCustomCrop', :path => '../node_modules/react-native-perspective-image-cropper'
 
+  pod 'RNImgToBase64', :path => '../node_modules/react-native-image-base64'
+
+  pod 'RNSVG', :path => '../node_modules/react-native-svg'
+
 end

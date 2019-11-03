@@ -3,6 +3,8 @@ package com.scanner;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.horcrux.svg.SvgPackage;
+import fr.snapp.imagebase64.RNImgToBase64Package;
 import fr.michaelvilleneuve.customcrop.RNCustomCropPackage;
 import avwave.dev.docscanner.RNDocScannerPackage;
 import com.reactlibrary.RNPdfScannerPackage;
@@ -43,6 +45,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new SvgPackage(),
+            new RNImgToBase64Package(),
             new RNCustomCropPackage(),
             new RNDocScannerPackage(),
             new RNPdfScannerPackage(),

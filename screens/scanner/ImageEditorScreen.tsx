@@ -2,56 +2,68 @@ import React, { useState, useEffect, useCallback } from "react";
 import { View, Image, Text, StyleSheet, TouchableOpacity } from "react-native";
 import CustomCrop from "react-native-perspective-image-cropper";
 import * as FileSystem from "expo-file-system";
-
+import ImgToBase64 from "react-native-image-base64";
 const ImageEditorScreen = props => {
   const [rectangleCoordinates, setRectangleCoordinates] = useState({
-    topLeft: { x: 10, y: 10 },
-    topRight: { x: 10, y: 10 },
-    bottomRight: { x: 10, y: 10 },
-    bottomLeft: { x: 10, y: 10 }
+    topLeft: { x: 100, y: 100 },
+    topRight: { x: 500, y: 100 },
+    bottomRight: { x: 500, y: 500 },
+    bottomLeft: { x: 100, y: 500 }
   });
-  const [customCrop, setCustomCrop] = useState(null);
+
+  const imageUri = props.navigation.getParam("uri");
+
+  const [customCrop, setCustomCrop] = useState();
   const [initialImage, setInitialImage] = useState();
   const [imageHeight, setImageHeight] = useState();
   const [imageWidth, setImageWidth] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
   const loadImage = useCallback(async () => {
-    const imageUri = props.navigation.getParam("uri");
-    const image64 = await FileSystem.readAsStringAsync(imageUri, "base64");
-    setImageHeight(300);
-    setImageWidth(300);
-    setIsLoading(false);
-    return image64;
-  }, [initialImage]);
+    await Image.getSize(
+      imageUri,
+      (width, height) => {
+        setImageHeight(height);
+        setImageWidth(width);
+        setInitialImage(imageUri);
+      },
+      err => {}
+    );
 
-  const updateImage = (image, newCoordinates) => {};
+    setIsLoading(false);
+  }, [initialImage, imageWidth, imageHeight, isLoading, customCrop]);
+
+  const updateImage = (image, newCoordinates) => {
+    setRectangleCoordinates(newCoordinates);
+  };
 
   const crop = () => {
+    console.log();
     customCrop.crop();
   };
 
   useEffect(() => {
-    setInitialImage(loadImage());
-  }, [initialImage, imageHeight, imageWidth, isLoading]);
+    loadImage();
+  }, [initialImage, imageHeight, imageWidth, isLoading, customCrop]);
 
   return (
     <View style={styles.screen}>
-      {isLoading && <Text>Image Editor</Text>}
+      {isLoading && <Text>Image Editor {initialImage}</Text>}
 
       {!isLoading && (
         <View>
+          <Text>Image Editor </Text>
           <CustomCrop
             updateImage={updateImage}
             rectangleCoordinates={rectangleCoordinates}
             initialImage={initialImage}
             height={imageHeight}
             width={imageWidth}
-            ref={ref => setCustomCrop(ref)}
+            ref={(ref: any) => setCustomCrop(ref)}
             overlayColor="rgba(18,190,210, 1)"
             overlayStrokeColor="rgba(20,190,210, 1)"
             handlerColor="rgba(20,150,160, 1)"
-            enablePanStrict={false}
+            enablePanStrict={true}
           />
 
           <TouchableOpacity onPress={crop}>
