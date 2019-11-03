@@ -1,15 +1,12 @@
 import React from "react";
-import { Button, StyleSheet, SafeAreaView } from "react-native";
+import { Button, StyleSheet, SafeAreaView, Platform } from "react-native";
 //import SafeAreaView, { SafeAreaProvider } from "react-native-safe-area-view";
 import { DrawerNavigatorItems } from "react-navigation-drawer";
 import { LOGIN } from "../../constants/RouteConstants";
 import CustomButton from "../../components/UI/CustomButton";
 import $t from "../../i18n/index";
 const LogoutScreen = props => (
-  <SafeAreaView
-    style={styles.container}
-    forceInset={{ top: "always", horizontal: "never" }}
-  >
+  <SafeAreaView style={styles.container}>
     <DrawerNavigatorItems {...props} />
 
     <CustomButton
@@ -22,7 +19,11 @@ const LogoutScreen = props => (
 );
 
 const styles = StyleSheet.create({
-  container: {}
+  container: {
+    flex: 1,
+
+    paddingTop: Platform.OS === "android" ? 50 : 0
+  }
 });
 
 export default LogoutScreen;

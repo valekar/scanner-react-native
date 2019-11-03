@@ -95,7 +95,7 @@ def enableSeparateBuildPerCPUArchitecture = false
 def enableProguardInReleaseBuilds = false
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
+    compileSdkVersion  rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
@@ -139,6 +139,9 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-perspective-image-cropper')
+    implementation project(':rn-doc-scanner')
+    implementation project(':react-native-document-scanner')
     implementation project(':react-native-gesture-handler')
     implementation project(':react-native-reanimated')
     implementation project(':react-native-screens')
@@ -153,4 +156,24 @@ dependencies {
 task copyDownloadableDepsToLibs(type: Copy) {
     from configurations.compile
     into 'libs'
+}
+
+allprojects {
+    repositories {
+       
+        mavenCentral()
+        maven {
+            url 'https://maven.google.com'
+        }
+        maven {
+            url "http://dl.bintray.com/steveliles/maven"
+        }
+        maven {
+            url "https://jitpack.io"
+        }
+        maven {
+  // expo-camera bundles a custom com.google.android:cameraview
+  url "$rootDir/../node_modules/expo-camera/android/maven"
+}
+    }
 }

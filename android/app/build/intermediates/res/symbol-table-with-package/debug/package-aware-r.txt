@@ -63,7 +63,9 @@ attr alpha
 attr alphabeticModifiers
 attr arrowHeadLength
 attr arrowShaftLength
+attr aspectRatio
 attr autoCompleteTextViewStyle
+attr autoFocus
 attr autoSizeMaxTextSize
 attr autoSizeMinTextSize
 attr autoSizePresetSizes
@@ -90,6 +92,7 @@ attr buttonStyle
 attr buttonStyleSmall
 attr buttonTint
 attr buttonTintMode
+attr camera_id
 attr checkboxStyle
 attr checkedTextViewStyle
 attr circleCrop
@@ -129,6 +132,8 @@ attr divider
 attr dividerHorizontal
 attr dividerPadding
 attr dividerVertical
+attr documentBodyColor
+attr documentBorderColor
 attr drawableSize
 attr drawerArrowStyle
 attr dropDownListViewStyle
@@ -138,10 +143,12 @@ attr editTextColor
 attr editTextStyle
 attr elevation
 attr expandActivityOverflowButtonDrawable
+attr facing
 attr fadeDuration
 attr failureImage
 attr failureImageScaleType
 attr firstBaselineToTopHeight
+attr flash
 attr font
 attr fontFamily
 attr fontProviderAuthority
@@ -254,6 +261,7 @@ attr showAsAction
 attr showDividers
 attr showText
 attr showTitle
+attr show_fps
 attr singleChoiceItemLayout
 attr spinBars
 attr spinnerDropDownItemStyle
@@ -309,6 +317,8 @@ attr toolbarStyle
 attr tooltipForegroundColor
 attr tooltipFrameBackground
 attr tooltipText
+attr torchTint
+attr torchTintLight
 attr track
 attr trackTint
 attr trackTintMode
@@ -359,6 +369,8 @@ color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
+color box_body
+color box_border
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -372,6 +384,9 @@ color browser_actions_title_color
 color button_material_dark
 color button_material_light
 color catalyst_redbox_background
+color colorAccent
+color colorPrimary
+color colorPrimaryDark
 color common_google_signin_btn_text_dark
 color common_google_signin_btn_text_dark_default
 color common_google_signin_btn_text_dark_disabled
@@ -383,6 +398,7 @@ color common_google_signin_btn_text_light_disabled
 color common_google_signin_btn_text_light_focused
 color common_google_signin_btn_text_light_pressed
 color common_google_signin_btn_tint
+color dark_gray
 color dim_foreground_disabled_material_dark
 color dim_foreground_disabled_material_light
 color dim_foreground_material_dark
@@ -430,6 +446,7 @@ color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
 color tooltip_background_dark
 color tooltip_background_light
+color torch_yellow
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -514,6 +531,11 @@ dimen compat_button_padding_vertical_material
 dimen compat_control_corner_material
 dimen compat_notification_large_icon_max_height
 dimen compat_notification_large_icon_max_width
+dimen crop_edge_width
+dimen crop_handle_corner_radius
+dimen crop_handle_edge_radius
+dimen crop_hit_hysteresis
+dimen crop_margin
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
 dimen highlight_alpha_material_colored
@@ -634,6 +656,9 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable circular_bg
+drawable circular_bg_en
+drawable circular_bg_selector
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -655,6 +680,10 @@ drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_check_circle
+drawable ic_flash
+drawable ic_rotate_left
+drawable ic_rotate_right
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -704,8 +733,10 @@ id adjust_width
 id alertTitle
 id all
 id always
+id any
 id async
 id auto
+id back
 id beginning
 id blocking
 id bottom
@@ -727,8 +758,10 @@ id chronometer
 id clip_horizontal
 id clip_vertical
 id collapseActionView
+id container
 id content
 id contentPanel
+id cropImageView
 id custom
 id customPanel
 id dark
@@ -748,11 +781,14 @@ id fitCenter
 id fitEnd
 id fitStart
 id fitXY
+id flash
 id focusCrop
 id forever
 id fps_text
+id front
 id ghost_view
 id glide_custom_view_target_tag
+id graphicOverlay
 id group_divider
 id home
 id homeAsUp
@@ -763,6 +799,9 @@ id ifRoom
 id image
 id info
 id italic
+id item_rotate_left
+id item_rotate_right
+id item_save
 id left
 id light
 id line1
@@ -779,12 +818,17 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id off
+id on
 id parentPanel
+id parent_layout
 id parent_matrix
+id preview
 id progress_circular
 id progress_horizontal
 id radio
 id react_test_id
+id redEye
 id right
 id right_icon
 id right_side
@@ -830,6 +874,7 @@ id start
 id status_bar_latest_event_content
 id submenuarrow
 id submit_area
+id surface_view
 id tabMode
 id tag_transition_group
 id tag_unhandled_key_event_manager
@@ -838,12 +883,14 @@ id text
 id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
+id texture_view
 id time
 id title
 id titleDividerNoCustom
 id title_template
 id top
 id topPanel
+id torch
 id transition_current_scene
 id transition_layout_save
 id transition_position
@@ -895,6 +942,7 @@ layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout dev_loading_view
 layout fps_view
+layout imagecropper_content
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -913,10 +961,14 @@ layout notification_template_part_time
 layout redbox_item_frame
 layout redbox_item_title
 layout redbox_view
+layout scanner_activity
+layout scanner_content
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+layout surface_view
+layout texture_view
 mipmap ic_launcher
 mipmap ic_launcher_round
 string abc_action_bar_home_description
@@ -960,6 +1012,8 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string adjustable_description
 string app_name
+string camera_busy
+string camera_permission_msg
 string catalyst_copy_button
 string catalyst_debugjs
 string catalyst_debugjs_nuclide
@@ -1009,6 +1063,7 @@ string link_description
 string search_description
 string search_menu_title
 string status_bar_notification_info_overflow
+string storage_permission_msg
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
@@ -1171,6 +1226,7 @@ style Base_Widget_AppCompat_Spinner_Underlined
 style Base_Widget_AppCompat_TextView_SpinnerItem
 style Base_Widget_AppCompat_Toolbar
 style Base_Widget_AppCompat_Toolbar_Button_Navigation
+style CVScannerTheme
 style CalendarDatePickerDialog
 style CalendarDatePickerStyle
 style ClockTimePickerDialog
@@ -1377,6 +1433,7 @@ style Widget_AppCompat_Spinner_Underlined
 style Widget_AppCompat_TextView_SpinnerItem
 style Widget_AppCompat_Toolbar
 style Widget_AppCompat_Toolbar_Button_Navigation
+style Widget_CameraView
 style Widget_Compat_NotificationActionContainer
 style Widget_Compat_NotificationActionText
 style Widget_Support_CoordinatorLayout
@@ -1397,10 +1454,13 @@ styleable AppCompatTextHelper android_textAppearance android_drawableTop android
 styleable AppCompatTextView android_textAppearance autoSizeMaxTextSize autoSizeMinTextSize autoSizePresetSizes autoSizeStepGranularity autoSizeTextType firstBaselineToTopHeight fontFamily lastBaselineToBottomHeight lineHeight textAllCaps
 styleable AppCompatTheme android_windowIsFloating android_windowAnimationStyle actionBarDivider actionBarItemBackground actionBarPopupTheme actionBarSize actionBarSplitStyle actionBarStyle actionBarTabBarStyle actionBarTabStyle actionBarTabTextStyle actionBarTheme actionBarWidgetTheme actionButtonStyle actionDropDownStyle actionMenuTextAppearance actionMenuTextColor actionModeBackground actionModeCloseButtonStyle actionModeCloseDrawable actionModeCopyDrawable actionModeCutDrawable actionModeFindDrawable actionModePasteDrawable actionModePopupWindowStyle actionModeSelectAllDrawable actionModeShareDrawable actionModeSplitBackground actionModeStyle actionModeWebSearchDrawable actionOverflowButtonStyle actionOverflowMenuStyle activityChooserViewStyle alertDialogButtonGroupStyle alertDialogCenterButtons alertDialogStyle alertDialogTheme autoCompleteTextViewStyle borderlessButtonStyle buttonBarButtonStyle buttonBarNegativeButtonStyle buttonBarNeutralButtonStyle buttonBarPositiveButtonStyle buttonBarStyle buttonStyle buttonStyleSmall checkboxStyle checkedTextViewStyle colorAccent colorBackgroundFloating colorButtonNormal colorControlActivated colorControlHighlight colorControlNormal colorError colorPrimary colorPrimaryDark colorSwitchThumbNormal controlBackground dialogCornerRadius dialogPreferredPadding dialogTheme dividerHorizontal dividerVertical dropDownListViewStyle dropdownListPreferredItemHeight editTextBackground editTextColor editTextStyle homeAsUpIndicator imageButtonStyle listChoiceBackgroundIndicator listDividerAlertDialog listMenuViewStyle listPopupWindowStyle listPreferredItemHeight listPreferredItemHeightLarge listPreferredItemHeightSmall listPreferredItemPaddingLeft listPreferredItemPaddingRight panelBackground panelMenuListTheme panelMenuListWidth popupMenuStyle popupWindowStyle radioButtonStyle ratingBarStyle ratingBarStyleIndicator ratingBarStyleSmall searchViewStyle seekBarStyle selectableItemBackground selectableItemBackgroundBorderless spinnerDropDownItemStyle spinnerStyle switchStyle textAppearanceLargePopupMenu textAppearanceListItem textAppearanceListItemSecondary textAppearanceListItemSmall textAppearancePopupMenuHeader textAppearanceSearchResultSubtitle textAppearanceSearchResultTitle textAppearanceSmallPopupMenu textColorAlertDialogListItem textColorSearchUrl toolbarNavigationButtonStyle toolbarStyle tooltipForegroundColor tooltipFrameBackground viewInflaterClass windowActionBar windowActionBarOverlay windowActionModeOverlay windowFixedHeightMajor windowFixedHeightMinor windowFixedWidthMajor windowFixedWidthMinor windowMinWidthMajor windowMinWidthMinor windowNoTitle
 styleable ButtonBarLayout allowStacking
+styleable CameraBridgeViewBase camera_id show_fps
+styleable CameraView android_adjustViewBounds aspectRatio autoFocus facing flash
 styleable ColorStateListItem android_color android_alpha alpha
 styleable CompoundButton android_button buttonTint buttonTintMode
 styleable CoordinatorLayout keylines statusBarBackground
 styleable CoordinatorLayout_Layout android_layout_gravity layout_anchor layout_anchorGravity layout_behavior layout_dodgeInsetEdges layout_insetEdge layout_keyline
+styleable DocumentScannerFragment documentBodyColor documentBorderColor torchTint torchTintLight
 styleable DrawerArrowToggle arrowHeadLength arrowShaftLength barLength color drawableSize gapBetweenBars spinBars thickness
 styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery
 styleable FontFamilyFont android_font android_fontWeight android_fontStyle android_ttcIndex android_fontVariationSettings font fontStyle fontVariationSettings fontWeight ttcIndex
@@ -1429,5 +1489,6 @@ styleable Toolbar android_gravity android_minHeight buttonGravity collapseConten
 styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewStubCompat android_id android_layout android_inflatedId
+xml file_paths
 xml file_system_provider_paths
 xml rn_dev_preferences

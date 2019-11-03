@@ -3,6 +3,9 @@ package com.scanner;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import fr.michaelvilleneuve.customcrop.RNCustomCropPackage;
+import avwave.dev.docscanner.RNDocScannerPackage;
+import com.reactlibrary.RNPdfScannerPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.swmansion.reanimated.ReanimatedPackage;
 import com.swmansion.rnscreens.RNScreensPackage;
@@ -40,6 +43,9 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNCustomCropPackage(),
+            new RNDocScannerPackage(),
+            new RNPdfScannerPackage(),
             new RNGestureHandlerPackage(),
             new ReanimatedPackage(),
             new RNScreensPackage(),

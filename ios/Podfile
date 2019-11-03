@@ -35,4 +35,8 @@ target 'scanner' do
 
   pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
 
+  pod 'RNPdfScanner', :path => '../node_modules/react-native-document-scanner'
+
+  pod 'RNCustomCrop', :path => '../node_modules/react-native-perspective-image-cropper'
+
 end

@@ -32,6 +32,10 @@
         "source": "C:\\Users\\Srini\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\2c52e45f17b9366722a1d0a79d677eed\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
+        "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_circular_bg.xml.flat",
+        "source": "E:\\scanner-react-native\\node_modules\\rn-doc-scanner\\android\\build\\intermediates\\packaged_res\\debug\\drawable\\circular_bg.xml"
+    },
+    {
         "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_list_selector_holo_dark.xml.flat",
         "source": "C:\\Users\\Srini\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\2c52e45f17b9366722a1d0a79d677eed\\res\\drawable\\abc_list_selector_holo_dark.xml"
     },
@@ -100,6 +104,10 @@
         "source": "C:\\Users\\Srini\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\2c52e45f17b9366722a1d0a79d677eed\\res\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
+        "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_rotate_left.xml.flat",
+        "source": "E:\\scanner-react-native\\node_modules\\rn-doc-scanner\\android\\build\\intermediates\\packaged_res\\debug\\drawable\\ic_rotate_left.xml"
+    },
+    {
         "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Srini\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\2c52e45f17b9366722a1d0a79d677eed\\res\\drawable-mdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
@@ -130,6 +138,10 @@
     {
         "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_text_select_handle_middle_mtrl_dark.png.flat",
         "source": "C:\\Users\\Srini\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\2c52e45f17b9366722a1d0a79d677eed\\res\\drawable-mdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png"
+    },
+    {
+        "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_scanner_activity.xml.flat",
+        "source": "E:\\scanner-react-native\\node_modules\\rn-doc-scanner\\android\\build\\intermediates\\packaged_res\\debug\\layout\\scanner_activity.xml"
     },
     {
         "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_fade_out.xml.flat",
@@ -528,6 +540,10 @@
         "source": "C:\\Users\\Srini\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\2c52e45f17b9366722a1d0a79d677eed\\res\\drawable-hdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
     },
     {
+        "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_scanner_content.xml.flat",
+        "source": "E:\\scanner-react-native\\node_modules\\rn-doc-scanner\\android\\build\\intermediates\\packaged_res\\debug\\layout\\scanner_content.xml"
+    },
+    {
         "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Srini\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\2c52e45f17b9366722a1d0a79d677eed\\res\\drawable-xhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
     },
@@ -642,6 +658,10 @@
     {
         "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Srini\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\2c52e45f17b9366722a1d0a79d677eed\\res\\drawable-hdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
+    },
+    {
+        "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_rotate_right.xml.flat",
+        "source": "E:\\scanner-react-native\\node_modules\\rn-doc-scanner\\android\\build\\intermediates\\packaged_res\\debug\\drawable\\ic_rotate_right.xml"
     },
     {
         "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
@@ -796,6 +816,10 @@
         "source": "C:\\Users\\Srini\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\2c52e45f17b9366722a1d0a79d677eed\\res\\drawable-hdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
     },
     {
+        "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml_file_paths.xml.flat",
+        "source": "E:\\scanner-react-native\\node_modules\\rn-doc-scanner\\android\\build\\intermediates\\packaged_res\\debug\\xml\\file_paths.xml"
+    },
+    {
         "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media.xml.flat",
         "source": "C:\\Users\\Srini\\.gradle\\caches\\transforms-1\\files-1.1\\media-1.0.0.aar\\a0fefce28f3572c29d694566d511a08f\\res\\layout\\notification_template_big_media.xml"
     },
@@ -866,6 +890,10 @@
     {
         "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "C:\\Users\\Srini\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\2c52e45f17b9366722a1d0a79d677eed\\res\\drawable-hdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_circular_bg_en.xml.flat",
+        "source": "E:\\scanner-react-native\\node_modules\\rn-doc-scanner\\android\\build\\intermediates\\packaged_res\\debug\\drawable\\circular_bg_en.xml"
     },
     {
         "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
@@ -1312,6 +1340,10 @@
         "source": "C:\\Users\\Srini\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\2c52e45f17b9366722a1d0a79d677eed\\res\\drawable-mdpi-v4\\abc_ic_star_black_48dp.png"
     },
     {
+        "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_circular_bg_selector.xml.flat",
+        "source": "E:\\scanner-react-native\\node_modules\\rn-doc-scanner\\android\\build\\intermediates\\packaged_res\\debug\\drawable\\circular_bg_selector.xml"
+    },
+    {
         "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\Srini\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\2c52e45f17b9366722a1d0a79d677eed\\res\\drawable-xxxhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },
@@ -1334,6 +1366,10 @@
     {
         "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
         "source": "E:\\scanner-react-native\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_ic_flash.png.flat",
+        "source": "E:\\scanner-react-native\\node_modules\\rn-doc-scanner\\android\\build\\intermediates\\packaged_res\\debug\\drawable-hdpi-v4\\ic_flash.png"
     },
     {
         "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_btn_checkable.xml.flat",
@@ -1374,6 +1410,10 @@
     {
         "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Srini\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\2c52e45f17b9366722a1d0a79d677eed\\res\\drawable-xxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_imagecropper_content.xml.flat",
+        "source": "E:\\scanner-react-native\\node_modules\\rn-doc-scanner\\android\\build\\intermediates\\packaged_res\\debug\\layout\\imagecropper_content.xml"
     },
     {
         "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_action_tombstone.xml.flat",
@@ -1434,6 +1474,10 @@
     {
         "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_abc_action_bar_item_background_material.xml.flat",
         "source": "C:\\Users\\Srini\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\2c52e45f17b9366722a1d0a79d677eed\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_check_circle.xml.flat",
+        "source": "E:\\scanner-react-native\\node_modules\\rn-doc-scanner\\android\\build\\intermediates\\packaged_res\\debug\\drawable\\ic_check_circle.xml"
     },
     {
         "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_search_url_text.xml.flat",
@@ -1522,6 +1566,10 @@
     {
         "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_focused_holo.9.png.flat",
         "source": "C:\\Users\\Srini\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\2c52e45f17b9366722a1d0a79d677eed\\res\\drawable-xxhdpi-v4\\abc_list_focused_holo.9.png"
+    },
+    {
+        "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout-v14_texture_view.xml.flat",
+        "source": "C:\\Users\\Srini\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-cameraview-1.0.0.aar\\93f2432cc0581d06438a83cfb31d6e43\\res\\layout-v14\\texture_view.xml"
     },
     {
         "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
@@ -1676,6 +1724,14 @@
         "source": "C:\\Users\\Srini\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\2c52e45f17b9366722a1d0a79d677eed\\res\\drawable-watch-v20\\abc_dialog_material_background.xml"
     },
     {
+        "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_flash.png.flat",
+        "source": "E:\\scanner-react-native\\node_modules\\rn-doc-scanner\\android\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\ic_flash.png"
+    },
+    {
+        "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_surface_view.xml.flat",
+        "source": "C:\\Users\\Srini\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-cameraview-1.0.0.aar\\93f2432cc0581d06438a83cfb31d6e43\\res\\layout\\surface_view.xml"
+    },
+    {
         "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Srini\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\2c52e45f17b9366722a1d0a79d677eed\\res\\drawable-mdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
     },
@@ -1768,6 +1824,10 @@
         "source": "C:\\Users\\Srini\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\2c52e45f17b9366722a1d0a79d677eed\\res\\drawable-hdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
+        "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_ic_flash.png.flat",
+        "source": "E:\\scanner-react-native\\node_modules\\rn-doc-scanner\\android\\build\\intermediates\\packaged_res\\debug\\drawable-mdpi-v4\\ic_flash.png"
+    },
+    {
         "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_redbox_item_frame.xml.flat",
         "source": "C:\\Users\\Srini\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-react-native-0.59.10.aar\\8d393eb3445cb077c9d84bfaa63b1119\\res\\layout\\redbox_item_frame.xml"
     },
@@ -1782,6 +1842,10 @@
     {
         "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Srini\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\2c52e45f17b9366722a1d0a79d677eed\\res\\drawable-xxhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_flash.png.flat",
+        "source": "E:\\scanner-react-native\\node_modules\\rn-doc-scanner\\android\\build\\intermediates\\packaged_res\\debug\\drawable-xhdpi-v4\\ic_flash.png"
     },
     {
         "merged": "E:\\scanner-react-native\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxxhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",

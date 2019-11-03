@@ -18,6 +18,8 @@
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
     <color name="background_material_light">@color/material_grey_50</color>
+    <color name="box_body">#12a4fb73</color>
+    <color name="box_border">#a4fb73</color>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
     <color name="bright_foreground_inverse_material_dark">@color/bright_foreground_material_light</color>
@@ -31,6 +33,9 @@
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
     <color name="catalyst_redbox_background">#eecc0000</color>
+    <color name="colorAccent">#2be378</color>
+    <color name="colorPrimary">#48cdb2</color>
+    <color name="colorPrimaryDark">#299881</color>
     <color name="common_google_signin_btn_text_dark_default">@android:color/white</color>
     <color name="common_google_signin_btn_text_dark_disabled">#1F000000</color>
     <color name="common_google_signin_btn_text_dark_focused">@android:color/black</color>
@@ -39,6 +44,7 @@
     <color name="common_google_signin_btn_text_light_disabled">#1F000000</color>
     <color name="common_google_signin_btn_text_light_focused">#90000000</color>
     <color name="common_google_signin_btn_text_light_pressed">#DE000000</color>
+    <color name="dark_gray">@android:color/darker_gray</color>
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
     <color name="dim_foreground_disabled_material_light">#80323232</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
@@ -84,6 +90,7 @@
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
     <color name="tooltip_background_dark">#e6616161</color>
     <color name="tooltip_background_light">#e6FFFFFF</color>
+    <color name="torch_yellow">#f9c724</color>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
     <dimen name="abc_action_bar_content_inset_with_nav">72dp</dimen>
     <dimen name="abc_action_bar_default_height_material">56dp</dimen>
@@ -168,6 +175,11 @@
     <dimen name="compat_control_corner_material">2dp</dimen>
     <dimen name="compat_notification_large_icon_max_height">320dp</dimen>
     <dimen name="compat_notification_large_icon_max_width">320dp</dimen>
+    <dimen name="crop_edge_width">3dp</dimen>
+    <dimen name="crop_handle_corner_radius">7dp</dimen>
+    <dimen name="crop_handle_edge_radius">5dp</dimen>
+    <dimen name="crop_hit_hysteresis">40dp</dimen>
+    <dimen name="crop_margin">24dp</dimen>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
@@ -286,6 +298,8 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="adjustable_description" translatable="false">Adjustable</string>
     <string name="app_name">scanner</string>
+    <string name="camera_busy">Camera is busy!</string>
+    <string name="camera_permission_msg">Permission to access the camera is required.</string>
     <string name="catalyst_copy_button" project="catalyst" translatable="false">Copy\n</string>
     <string name="catalyst_debugjs" project="catalyst" translatable="false">Debug JS Remotely</string>
     <string name="catalyst_debugjs_nuclide" project="catalyst" translatable="false">Debug JS in Nuclide</string>
@@ -335,6 +349,7 @@
     <string name="search_description" translatable="false">Search Field</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="storage_permission_msg">Permission to access sdcard is required to store images.</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
@@ -1407,6 +1422,15 @@
         <item name="android:minWidth">56dp</item>
         <item name="android:scaleType">center</item>
     </style>
+    <style name="CVScannerTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
     <style name="CalendarDatePickerDialog" ns2:targetApi="lollipop" parent="Theme.AppCompat.Light.Dialog">
         <item name="android:datePickerStyle">@style/CalendarDatePickerStyle</item>
     </style>
@@ -1871,6 +1895,13 @@
     <style name="Widget.AppCompat.TextView.SpinnerItem" parent="Base.Widget.AppCompat.TextView.SpinnerItem"/>
     <style name="Widget.AppCompat.Toolbar" parent="Base.Widget.AppCompat.Toolbar"/>
     <style name="Widget.AppCompat.Toolbar.Button.Navigation" parent="Base.Widget.AppCompat.Toolbar.Button.Navigation"/>
+    <style name="Widget.CameraView" parent="android:Widget">
+        <item name="android:adjustViewBounds">false</item>
+        <item name="facing">back</item>
+        <item name="aspectRatio">4:3</item>
+        <item name="autoFocus">true</item>
+        <item name="flash">auto</item>
+    </style>
     <style name="Widget.Compat.NotificationActionContainer" parent=""/>
     <style name="Widget.Compat.NotificationActionText" parent=""/>
     <style name="Widget.Support.CoordinatorLayout" parent="android:Widget">
@@ -2547,6 +2578,28 @@
              enough space to lay them out side-by-side. -->
         <attr format="boolean" name="allowStacking"/>
     </declare-styleable>
+    <declare-styleable name="CameraBridgeViewBase"><attr format="boolean" name="show_fps"/><attr format="integer" name="camera_id">
+          <enum name="any" value="-1"/>
+          <enum name="back" value="99"/>
+          <enum name="front" value="98"/>
+       </attr></declare-styleable>
+    <declare-styleable name="CameraView"><attr name="android:adjustViewBounds"/><attr format="enum" name="facing">
+            
+            <enum name="back" value="0"/>
+            
+            <enum name="front" value="1"/>
+        </attr><attr format="string" name="aspectRatio"/><attr format="boolean" name="autoFocus"/><attr format="enum" name="flash">
+            
+            <enum name="off" value="0"/>
+            
+            <enum name="on" value="1"/>
+            
+            <enum name="torch" value="2"/>
+            
+            <enum name="auto" value="3"/>
+            
+            <enum name="redEye" value="4"/>
+        </attr></declare-styleable>
     <declare-styleable name="ColorStateListItem">
         <!-- Base color for this state. -->
         <attr name="android:color"/>
@@ -2678,6 +2731,12 @@
             <!-- Dodge all the inset edges. -->
             <flag name="all" value="0x77"/>
         </attr>
+    </declare-styleable>
+    <declare-styleable name="DocumentScannerFragment">
+        <attr format="color" name="torchTint"/>
+        <attr format="color" name="torchTintLight"/>
+        <attr format="color" name="documentBorderColor"/>
+        <attr format="color" name="documentBodyColor"/>
     </declare-styleable>
     <declare-styleable name="DrawerArrowToggle">
         <!-- The drawing color for the bars -->
