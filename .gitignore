@@ -12,3 +12,7 @@ web-report/
 
 # macOS
 .DS_Store
+android/app/build/**
+.expo-shared/*
+package-lock.json
+android/.gradle/*

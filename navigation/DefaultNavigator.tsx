@@ -15,7 +15,8 @@ import {
   DRAWER,
   STARTUP,
   PROFILE,
-  CHANGE_PASSWORD
+  CHANGE_PASSWORD,
+  IMAGE_MANIPULATOR
 } from "../constants/RouteConstants";
 import LogoutScreen from "../screens/auth/LogoutScreen";
 import { Ionicons } from "@expo/vector-icons";
@@ -24,6 +25,7 @@ import RegisterScreen from "../screens/auth/RegisterScreen";
 import StartupScreen from "../screens/auth/StartupScreen";
 import ProfileScreen from "../screens/user/ProfileScreen";
 import ChangePasswordScreen from "../screens/user/ChangePasswordScreen";
+import ImageManipulationScreen from "../screens/image/ImageManipulationScreen";
 
 const defaultNavigationOptions = {
   headerTitle: "Default Name",
@@ -50,9 +52,8 @@ const navigationOptions = {
 
 const HomeNavigator = createStackNavigator(
   {
-    [MAIN]: MainScreen
-    //[PROFILE]: ProfileScreen,
-    //[CHANGE_PASSWORD]: ChangePasswordScreen
+    [MAIN]: MainScreen,
+    [IMAGE_MANIPULATOR]: ImageManipulationScreen
   },
 
   {

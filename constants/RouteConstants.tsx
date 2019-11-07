@@ -11,5 +11,8 @@ export const PROFILE = "Profile ";
 export const UPDATE_USER = "UpdateUser";
 export const CHANGE_PASSWORD = "Password ";
 
+export const IMAGE_MANIPULATOR = "ImageManipulator";
+
+// just constants
 export const UPDATE_PROFILE = "Update Profile";
 export const CHANGE_PASSWORD_HEADER = "Change Password";
