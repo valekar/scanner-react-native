@@ -14,7 +14,11 @@ import { HeaderButtons, Item } from "react-navigation-header-buttons";
 import { useSelector } from "react-redux";
 import MyItem from "../models/MyItem";
 import ItemComponent from "../components/ItemComponent";
-import { SCANNER, CAMERA } from "../constants/RouteConstants";
+import {
+  SCANNER,
+  CAMERA,
+  IMAGE_MANIPULATOR
+} from "../constants/RouteConstants";
 import { RNDocScanner } from "rn-doc-scanner";
 import CameraSelector from "../components/UI/CameraSelector";
 //import { CAMERA } from "expo-permissions";
@@ -26,13 +30,18 @@ const MainScreen = props => {
     console.log("Show details");
   };
 
-  const onPressScan = () => {
+  const onPressScan = async () => {
     if (Platform.OS === "android") {
       try {
-        //const image = await RNDocScanner.getDocumentCrop(true);
+        const image = await RNDocScanner.getDocumentCrop(true);
         //Alert.alert("Heloo", "Heloo", [{ text: "Okay" }]);
-        props.navigation.navigate({ routeName: CAMERA });
+        //props.navigation.navigate({ routeName: CAMERA });
         //return <CameraSelector />;
+
+        props.navigation.navigate({
+          routeName: IMAGE_MANIPULATOR,
+          params: { imageCropped: image }
+        });
       } catch (err) {
         console.log(err);
       }

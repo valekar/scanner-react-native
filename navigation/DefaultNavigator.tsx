@@ -18,7 +18,8 @@ import {
   CHANGE_PASSWORD,
   SCANNER,
   CAMERA,
-  IMAGE_EDITOR
+  IMAGE_EDITOR,
+  IMAGE_MANIPULATOR
 } from "../constants/RouteConstants";
 import LogoutScreen from "../screens/auth/LogoutScreen";
 import { Ionicons } from "@expo/vector-icons";
@@ -30,6 +31,7 @@ import ChangePasswordScreen from "../screens/user/ChangePasswordScreen";
 import ScannerScreen from "../screens/scanner/ScannerScreen";
 import CameraScreen from "../screens/scanner/CameraScreen";
 import ImageEditorScreen from "../screens/scanner/ImageEditorScreen";
+import ImageManipulationScreen from "../screens/scanner/ImageManipulationScreen";
 
 const defaultNavigationOptions = {
   headerTitle: "Default Name",
@@ -60,7 +62,8 @@ const HomeNavigator = createStackNavigator(
     [SCANNER]: ScannerScreen,
     //[CHANGE_PASSWORD]: ChangePasswordScreen
     [CAMERA]: CameraScreen,
-    [IMAGE_EDITOR]: ImageEditorScreen
+    [IMAGE_EDITOR]: ImageEditorScreen,
+    [IMAGE_MANIPULATOR]: ImageManipulationScreen
   },
 
   {

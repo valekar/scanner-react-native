@@ -1,8 +1,9 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import { View, Image, Text, StyleSheet, TouchableOpacity } from "react-native";
 import CustomCrop from "react-native-perspective-image-cropper";
 import * as FileSystem from "expo-file-system";
 import ImgToBase64 from "react-native-image-base64";
+import { IMAGE_MANIPULATOR } from "../../constants/RouteConstants";
 const ImageEditorScreen = props => {
   const [rectangleCoordinates, setRectangleCoordinates] = useState({
     topLeft: { x: 100, y: 100 },
@@ -31,14 +32,26 @@ const ImageEditorScreen = props => {
     );
 
     setIsLoading(false);
-  }, [initialImage, imageWidth, imageHeight, isLoading, customCrop]);
+  }, [
+    initialImage,
+    imageWidth,
+    imageHeight,
+    isLoading,
+    customCrop,
+    setIsLoading,
+    setInitialImage
+  ]);
 
   const updateImage = (image, newCoordinates) => {
     setRectangleCoordinates(newCoordinates);
+    props.navigation.navigate({
+      routeName: IMAGE_MANIPULATOR,
+      params: { imageCropped: image, coordinates: newCoordinates }
+    });
   };
 
   const crop = () => {
-    console.log();
+    console.log("hii");
     customCrop.crop();
   };
 
@@ -55,7 +68,7 @@ const ImageEditorScreen = props => {
           <Text>Image Editor </Text>
           <CustomCrop
             updateImage={updateImage}
-            rectangleCoordinates={rectangleCoordinates}
+            rectangleCoordinates={!isLoading && rectangleCoordinates}
             initialImage={initialImage}
             height={imageHeight}
             width={imageWidth}

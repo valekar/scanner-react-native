@@ -23,6 +23,7 @@
     "react-native-easy-grid": "^0.2.2",
     "react-native-gesture-handler": "~1.3.0",
     "react-native-image-base64": "^0.1.3",
+    "react-native-image-pan-zoom": "^2.1.11",
     "react-native-keyboard-aware-scroll-view": "^0.9.1",
     "react-native-opencv3": "^1.0.7",
     "react-native-perspective-image-cropper": "^0.4.3",
@@ -41,7 +42,7 @@
     "react-redux": "^7.1.1",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
-    "rn-doc-scanner": "git+https://github.com/Diastorm/rn-doc-scanner-android.git",
+    "rn-doc-scanner": "git+https://github.com/valekar/rn-doc-scanner-android.git",
     "yup": "^0.27.0"
   },
   "devDependencies": {

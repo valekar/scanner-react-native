@@ -14,6 +14,7 @@ export const CHANGE_PASSWORD = "Password ";
 export const SCANNER = "Scanner";
 export const CAMERA = "Camera";
 export const IMAGE_EDITOR = "ImageEditor";
+export const IMAGE_MANIPULATOR = "ImageManipulator";
 
 //constants
 export const UPDATE_PROFILE = "Update Profile";
