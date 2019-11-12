@@ -33,6 +33,7 @@
     "react-redux": "^7.1.1",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
+    "rn-doc-scanner": "git+https://github.com/valekar/rn-doc-scanner-android.git",
     "yup": "^0.27.0"
   },
   "devDependencies": {
