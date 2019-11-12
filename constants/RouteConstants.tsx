@@ -11,6 +11,8 @@ export const PROFILE = "Profile ";
 export const UPDATE_USER = "UpdateUser";
 export const CHANGE_PASSWORD = "Password ";
 export const IMAGE_MANIPULATOR = "ImageManipulator";
+export const IMAGE_EDITOR = "ImageEditor";
+export const OPEN_CAMERA = "Camera";
 
 export const UPDATE_PROFILE = "Update Profile";
 export const CHANGE_PASSWORD_HEADER = "Change Password";

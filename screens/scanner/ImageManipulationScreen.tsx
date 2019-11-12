@@ -1,5 +1,5 @@
-import React from "react";
-import { View, StyleSheet, Image, Dimensions } from "react-native";
+import React, { Component } from "react";
+import { View, StyleSheet, Text, Image, Dimensions } from "react-native";
 import ImageZoom from "react-native-image-pan-zoom";
 const ImageManipulationScreen = props => {
   const cropped = props.navigation.getParam("imageCropped");

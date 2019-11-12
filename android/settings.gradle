@@ -1,4 +1,8 @@
 apply from: '../node_modules/react-native-unimodules/gradle.groovy'
+include ':react-native-perspective-image-cropper'
+project(':react-native-perspective-image-cropper').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-perspective-image-cropper/android')
+include ':react-native-svg'
+project(':react-native-svg').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-svg/android')
 include ':react-native-screens'
 project(':react-native-screens').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-screens/android')
 include ':react-native-reanimated'
@@ -6,6 +10,9 @@ project(':react-native-reanimated').projectDir = new File(rootProject.projectDir
 include ':react-native-gesture-handler'
 project(':react-native-gesture-handler').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-gesture-handler/android')
 includeUnimodulesProjects()
+
+include ':openCVLibrary310'
+project(':openCVLibrary310').projectDir = new File(rootProject.projectDir,'../node_modules/react-native-perspective-image-cropper/android/openCVLibrary310')
 
 rootProject.name = 'scanner'
 

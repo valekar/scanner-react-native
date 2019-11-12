@@ -32,4 +32,8 @@ target 'scanner' do
 
   use_unimodules!
 
+  pod 'RNSVG', :path => '../node_modules/react-native-svg'
+
+  pod 'RNCustomCrop', :path => '../node_modules/react-native-perspective-image-cropper'
+
 end
