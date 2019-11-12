@@ -29,8 +29,8 @@ const MainScreen = props => {
   const onPressScan = async () => {
     if (Platform.OS === "android") {
       try {
-        //const image = await RNDocScanner.getDocumentCrop(true);
-        const image = "";
+        const image = await RNDocScanner.getDocumentCrop(true);
+        //const image = "";
         props.navigation.navigate({
           routeName: IMAGE_MANIPULATOR,
           params: { imageCropped: image }
